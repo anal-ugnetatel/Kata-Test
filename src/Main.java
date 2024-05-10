@@ -148,16 +148,24 @@ public class Main {
         }
         RomanNumerals[] values = RomanNumerals.values();
         StringBuilder anser = new StringBuilder("");
-        int ten = n/10;
-        int nine = n%10/9;
-        int eight = n%10%9/8;
-        int seven = n%10%9%8/7;
-        int six= n%10%9%8%7/6;
-        int five = n%10%9%8%7%6/5;
-        int four =n%10%9%8%7%6%5/4;
-        int three =n%10%9%8%7%6%5%4/3;
-        int two =n%10%9%8%7%6%5%4%3/2;
-        int one =n%10%9%8%7%6%5%4%3%2/1;
+        int hundred =n/100;
+        int fifty = n%100/50;
+        int ten = n%100%50/10;
+        int nine = n%100%50%10/9;
+        int eight = n%100%50%10%9/8;
+        int seven = n%100%50%10%9%8/7;
+        int six= n%100%50%10%9%8%7/6;
+        int five = n%100%50%10%9%8%7%6/5;
+        int four =n%100%50%10%9%8%7%6%5/4;
+        int three =n%100%50%10%9%8%7%6%5%4/3;
+        int two =n%100%50%10%9%8%7%6%5%4%3/2;
+        int one =n%100%50%10%9%8%7%6%5%4%3%2/1;
+        for(int i = 0; i < hundred; i++){
+            anser.append(values[11]);
+        }
+        for(int i = 0; i < fifty; i++){
+            anser.append(values[10]);
+        }
         for(int i = 0; i < ten; i++){
             anser.append(values[9]);
         }
